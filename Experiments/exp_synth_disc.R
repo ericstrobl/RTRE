@@ -80,7 +80,7 @@ for (i in 1:250){
     
     print("E")
     ptm <- proc.time()
-    shaps = ISVnInt4(data$data,DAGn,DAG$Y) ##
+    shaps = RTRE(data$data,DAGn,DAG$Y) ##
     ISV_res[[i]][[n]]$time = (proc.time() - ptm)[3]
     ISV_res[[i]][[n]]$RMSE_err = sqrt(mean(  (shaps$RCEs - GT[1:nsamps[n],])^2   ))
     ISV_res[[i]][[n]]$RMSE_TE = sqrt(mean(  (shaps$TEs - TEs[1:nsamps[n],])^2   ))
