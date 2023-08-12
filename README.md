@@ -12,8 +12,8 @@ Treatments ideally mitigate pathogenesis, or the detrimental effects of the root
 
 # Run R-TRE
 
-> DAG = generate_DAG(p,2) # generate a DAG and linear SEM with p=10 vertices
+> DAG = generate_DAG_discrete(p,2) # generate a DAG and linear SEM with p=10 vertices
 
-> dataT = sample_DAG_start(10000,DAG) # draw 10000 samples from the SEM + discretize some variables to ensure non-invertibility
+> dataT = sample_DAG_start_discrete(10000,DAG) # draw 10000 samples from the SEM + discretize some variables to ensure non-invertibility
 
 > out = RTRE(dataT$data,DAG$graph,10) # recover the root causal effects and TREs; can also replace `DAG$graph` with a learned graph
