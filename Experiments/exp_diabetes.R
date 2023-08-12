@@ -26,7 +26,7 @@ for (c in 1:ncol(data)){
   }
 }
 
-reps = 1000
+reps = 250
 Gs = vector("list",reps)
 do_reg_res = Gs
 marginal_SV_res = Gs
@@ -42,7 +42,7 @@ correl_res = Gs
 do_SV_res = Gs
 
 
-for (i in 156:1000){
+for (i in 1:250){
   print(i)
   
   # bootstrap draw error terms
@@ -99,7 +99,7 @@ for (i in 156:1000){
   
   print("E")
   ptm <- proc.time()
-  shaps = ISVnInt4(datan,DAGn,Yi,exc=c(6,7)) ##
+  shaps = RTRE(datan,DAGn,Yi,exc=c(6,7)) ##
   ISV_res[[i]]$time = (proc.time() - ptm)[3]
   ISV_res[[i]]$RMSE_err = sqrt(mean(  (shaps$RCEs - GT)^2   ))
   ISV_res[[i]]$RMSE_TE = sqrt(mean(  (shaps$TEs - TEs)^2   ))
