@@ -1,6 +1,6 @@
 library(pcalg)
 
-nsamps = c(1000,5000,25000)
+nsamps = c(1000,3000,9000)
 p = 10
 reps = 250
 
