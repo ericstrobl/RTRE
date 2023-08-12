@@ -4,7 +4,7 @@ learn_graph_pc <- function(data){
   p = ncol(data)
   suffStat = list()
   suffStat$data = data
-  graph = pc(suffStat,earth_wrap,0.01,p=p,u2pd="rand")@graph
+  graph = pc(suffStat,lin_wrap,0.01,p=p,u2pd="rand")@graph
   plot(graph)
   CPDAG = as(graph,"matrix")
   res1 = my_pdag2alldags(CPDAG)
