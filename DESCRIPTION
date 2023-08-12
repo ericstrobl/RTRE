@@ -1,4 +1,4 @@
-Package: CCI
+Package: RTRE
 Type: Package
 Title: Root and Treated Root Causal Effects
 Version: 0.1.0
